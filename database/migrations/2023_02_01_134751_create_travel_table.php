@@ -15,8 +15,15 @@ return new class extends Migration
     {
         Schema::create('travel', function (Blueprint $table) {
             $table->id();
+            $table-> string('destination',32);
+            $table-> string('departure_station',32);
+            $table-> string('arrival_station',64);
+            $table-> integer('time_travel')-> unsigned();
+            $table-> integer('price')-> unsigned();
             $table->timestamps();
         });
+
+        
     }
 
     /**
